@@ -4,7 +4,23 @@ import { Row,Col, Container } from "react-bootstrap";
 import youtube from './youtube.png'
 import Geners from "./geners";
 import Player from "./player";
+import CardP from "./card";
+import { useEffect, useState } from "react";
+import axios from "axios";
 const Index=()=>{
+
+
+  const [video, setVideo] = useState([])
+
+  useEffect(() => {
+    var url = "http://localhost:5000/video";
+    axios.get(url).then(res => {
+      const video = res.data;
+      setVideo(video);
+    })
+  }, []);
+  console.log(video)
+
 return(
     <>
     <Container fluid>
@@ -20,7 +36,17 @@ return(
       <Player />
   </Row>
   </Container>
-  
+  <Container>
+        <Row>
+          <Col >
+            {video.map((item, index) => {
+              return (
+                <CardP img={item.imgurl} title={item.title} />
+              )
+            })}
+          </Col>
+        </Row>
+      </Container>
 </Container>
 
     </>
