@@ -6,17 +6,7 @@ import axios from "axios";
 const Geners = () => {
 
 
-  const [video, setVideo] = useState([])
-
-  useEffect(() => {
-    var url = "http://localhost:5000/video";
-    axios.get(url).then(res => {
-      const video = res.data;
-      setVideo(video);
-    })
-  }, []);
-  console.log(video)
-
+ 
 
   return (
     <>
@@ -30,17 +20,7 @@ const Geners = () => {
           </Nav>
         </Container>
       </Navbar>
-      <Container>
-        <Row>
-          <Col >
-            {video.map((item, index) => {
-              return (
-                <CardP img={item.imgurl} title={item.title} />
-              )
-            })}
-          </Col>
-        </Row>
-      </Container>
+     
     </>
   )
 }
