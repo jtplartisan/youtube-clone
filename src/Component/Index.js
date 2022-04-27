@@ -21,6 +21,8 @@ const Index=()=>{
   }, []);
   console.log(video)
 
+
+
 return(
     <>
     <Container fluid>
@@ -38,13 +40,15 @@ return(
   </Container>
   <Container>
         <Row>
-          <Col >
+          
             {video.map((item, index) => {
               return (
-                <CardP img={item.imgurl} title={item.title} />
+                <Col sm={3}>
+                <CardP img={item.imgurl} title={item.title} video={item.url} />
+                </Col>
               )
             })}
-          </Col>
+        
         </Row>
       </Container>
 </Container>

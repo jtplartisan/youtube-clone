@@ -1,18 +1,16 @@
-import { Card, ListGroupItem, ListGroup } from "react-bootstrap"
+import { Card, Button, ListGroup } from "react-bootstrap"
 
 const CardP =(props) =>{
 
     return(
 
-        <Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src={props.img} />
+        <Card style={{ width: '18rem', padding:'1rem' }} className="justify-centent-center">
+  <Card.Img variant="top" src={props.img} style={{ width: '16rem' , height: '13rem'}} />
   <Card.Body>
-    <Card.Title>{props.title}</Card.Title>
-    
+    <Card.Title className="text-center">{props.title}</Card.Title>
   </Card.Body>
   <ListGroup className="list-group-flush">
-    <ListGroupItem>Cras justo odio</ListGroupItem>
-   
+    <Button >Play</Button>
   </ListGroup>
   
 </Card>

@@ -1,8 +1,6 @@
 import React from "react";
-import { Navbar, Container, Nav, Row, Col } from "react-bootstrap";
-import CardP from "./card";
-import { useEffect, useState } from "react";
-import axios from "axios";
+import { Navbar, Container, Nav } from "react-bootstrap";
+
 const Geners = () => {
 
 
