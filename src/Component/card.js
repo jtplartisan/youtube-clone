@@ -1,6 +1,6 @@
 import { Card, Button, ListGroup } from "react-bootstrap"
 import { useDispatch, useSelector } from "react-redux";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { play } from "../reducer/reducer";
 import { Container, Row, Col } from "react-bootstrap";
 import { BsHandThumbsDown, BsHandThumbsUp } from "react-icons/bs";
@@ -10,6 +10,10 @@ import axios from "axios";
 const CardP = (props) => {
   const [urlplay, setUrlplay] = useState('');
   const dispatch = useDispatch();
+  const url=props.url;
+  useEffect(()=>{
+    setUrlplay(url)
+  },[])
   const [Like, setlike] = useState(0);
   function like(id) {
     axios.patch(`http://localhost:5000/video/${id}`, {
