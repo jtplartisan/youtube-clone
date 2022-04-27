@@ -18,19 +18,22 @@ const CardP = (props) => {
 
   const [Like, setlike] = useState(0);
 
-  function like(id) {
-    axios.patch(`http://localhost:5000/video/${id}`, {
+  function like(id,like) {
+    
+    
+      axios.patch(`http://localhost:5000/video/${id}`,{
+        like:'1'
+          
+      }).then((res) => {
+        console.log(res);
+        alert('Liked')
+      }).catch((err) =>{
+        console.log(err)
+      })
+    }
 
-    }).then((res) => {
+    
 
-      alert('Liked')
-
-    }).catch((err) => {
-      console.log(err)
-    })
-  }
-
-  
   return (
     <>    <Card style={{ width: '18rem', padding: '1rem' }} className="justify-centent-center">
       <Card.Img variant="top" src={props.img} style={{ width: '16rem', height: '13rem' }} />
