@@ -22,6 +22,13 @@
       "tags": "Action"
     },
     {
+      "id": 4,
+      "url": "https://www.youtube.com/embed/gKizDojsdvs",
+      "title": "KGF",
+      "imgurl":"https://www.filmibeat.com/img/2017/08/kgf1-29-1503989563.jpg",
+      "tags": "Thriller"
+    },
+    {
       "id": 5,
       "url": "https://www.youtube.com/embed/TxHQvYy6al8",
       "title": "jodi",
@@ -46,7 +53,7 @@
       "id": 8,
       "url": "https://www.youtube.com/embed/Nf35om7AP2o",
       "title": "Bahubali - The Beginning ",
-      "imgurl":"http://www.impawards.com/intl/india/2015/posters/bahubali_the_beginning_ver10.jpg",
+      "imgurl":"https://upload.wikimedia.org/wikipedia/en/thumb/5/5f/Baahubali_The_Beginning_poster.jpg/220px-Baahubali_The_Beginning_poster.jpg",
       "tags": "Action"
     }
   ]
