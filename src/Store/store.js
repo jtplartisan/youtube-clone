@@ -1,8 +1,8 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { configureStore } from '@reduxjs/toolkit';
+import playListReducer from '../reducer/reducer';
 
 export const store = configureStore({
-   
-    reducerplay:{
-        play:urlPlay
-      }
-  });
+  reducer: {
+    playlist: playListReducer
+  }
+});
