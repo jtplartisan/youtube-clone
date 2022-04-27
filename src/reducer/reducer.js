@@ -1,9 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 const initialState={
+    
     play:[]
 };
 export const urlSlice=createSlice({
- 
+    
     play:"urlplay",
     initialState,
     reducers:{
