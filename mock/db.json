@@ -4,59 +4,59 @@
       "id": 1,
       "url": "https://www.youtube.com/embed/NpJ6lnbgi_s",
       "title": "Check",
-      "imgurl":"https://gallery.123telugu.com/content/images/check-feat.jpg",
-      "tags": "Thriller"
+      "imgurl": "https://gallery.123telugu.com/content/images/check-feat.jpg",
+      "tags": "Thriller",
+      "like": "1"
     },
     {
       "id": 2,
       "url": "https://www.youtube.com/embed/R7aCOI4DuA0",
       "title": "A.Aa",
-      "imgurl":"https://www.moviepazes.com/images/gallery/A%20Aa%20Movie%20Posters/00%20(2).jpg",
-      "tags": "Love"
+      "imgurl": "https://www.moviepazes.com/images/gallery/A%20Aa%20Movie%20Posters/00%20(2).jpg",
+      "tags": "Love",
+      "like": "2"
     },
     {
       "id": 3,
       "url": "https://www.youtube.com/embed/tDhPB5HWcho",
       "title": "Baahubali 2  ",
-      "imgurl":"https://data1.ibtimes.co.in/en/full/634050/bahubali-2-baahubali-2-baahubali-2-poster-prabhas-anushka-shetty-baahubali-conclusion.jpg?w=899&h=422&l=50&t=40",
+      "imgurl": "https://data1.ibtimes.co.in/en/full/634050/bahubali-2-baahubali-2-baahubali-2-poster-prabhas-anushka-shetty-baahubali-conclusion.jpg?w=899&h=422&l=50&t=40",
       "tags": "Action"
     },
     {
       "id": 4,
       "url": "https://www.youtube.com/embed/gKizDojsdvs",
       "title": "KGF",
-      "imgurl":"https://www.filmibeat.com/img/2017/08/kgf1-29-1503989563.jpg",
+      "imgurl": "https://www.filmibeat.com/img/2017/08/kgf1-29-1503989563.jpg",
       "tags": "Thriller"
     },
     {
       "id": 5,
       "url": "https://www.youtube.com/embed/TxHQvYy6al8",
       "title": "jodi",
-      "imgurl":"https://i1.wp.com/www.socialnews.xyz/wp-content/uploads/2019/08/05/Jodi-Movie-Release-date-HD-Poster-and-Still-.jpg?quality=80&zoom=1&ssl=1",
+      "imgurl": "https://i1.wp.com/www.socialnews.xyz/wp-content/uploads/2019/08/05/Jodi-Movie-Release-date-HD-Poster-and-Still-.jpg?quality=80&zoom=1&ssl=1",
       "tags": "Thriller"
     },
     {
       "id": 6,
       "url": "https://www.youtube.com/embed/0u1H9Z__bW4",
       "title": "Savyasachi ",
-      "imgurl":"https://www.telugu360.com/wp-content/uploads/2018/11/Savyasachi-Review-Savyasachi-Movie-Rating.jpg",
+      "imgurl": "https://www.telugu360.com/wp-content/uploads/2018/11/Savyasachi-Review-Savyasachi-Movie-Rating.jpg",
       "tags": "Action"
     },
     {
       "id": 7,
       "url": "https://www.youtube.com/embed/I3o-UeFZFKo",
       "title": "Fidaa ",
-      "imgurl":"https://data1.ibtimes.co.in/photo/en/full/70405/varun-tej-sai-pallavi-fidaa-movie-posters.jpg?w=900",
+      "imgurl": "https://data1.ibtimes.co.in/photo/en/full/70405/varun-tej-sai-pallavi-fidaa-movie-posters.jpg?w=900",
       "tags": "Love"
     },
     {
       "id": 8,
       "url": "https://www.youtube.com/embed/Nf35om7AP2o",
       "title": "Bahubali - 1 ",
-      "imgurl":"https://upload.wikimedia.org/wikipedia/en/thumb/5/5f/Baahubali_The_Beginning_poster.jpg/220px-Baahubali_The_Beginning_poster.jpg",
+      "imgurl": "https://upload.wikimedia.org/wikipedia/en/thumb/5/5f/Baahubali_The_Beginning_poster.jpg/220px-Baahubali_The_Beginning_poster.jpg",
       "tags": "Action"
     }
   ]
 }
-
-

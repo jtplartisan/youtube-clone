@@ -20,7 +20,6 @@ const Player=()=>{
 
         </Col>
   </Row>
-  <Row>{play}</Row>
 
 </Container>
 </>
