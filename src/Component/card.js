@@ -1,6 +1,11 @@
 import { Card, Button, ListGroup } from "react-bootstrap"
+import { useDispatch,useSelector } from "react-redux";
+import { useState } from "react";
+import { play } from "../reducer/reducer";
 
 const CardP =(props) =>{
+  const [urlplay, setUrlplay] = useState('');
+  const dispatch = useDispatch();
 
     return(
 
@@ -10,7 +15,7 @@ const CardP =(props) =>{
     <Card.Title className="text-center">{props.title}</Card.Title>
   </Card.Body>
   <ListGroup className="list-group-flush">
-    <Button >Play</Button>
+    <Button onClick={() => dispatch(play(urlplay))}>Play</Button>
   </ListGroup>
   
 </Card>
