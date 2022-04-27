@@ -46,7 +46,7 @@ const Index = () => {
             {filter.map((item, index) => {
               return (
                 <Col sm={3}>
-                  <CardP img={item.imgurl} title={item.title} video={item.url} />
+                  <CardP img={item.imgurl} title={item.title} video={item.url} id={item.id}/>
                 </Col>
               )
             })}

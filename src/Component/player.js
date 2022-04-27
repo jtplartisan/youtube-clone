@@ -39,8 +39,11 @@ const Player=()=>{
 
         </Col>
   </Row>
+<<<<<<< HEAD
   <Row>{play}</Row>
 >>>>>>> eb90263731b21eeb05edbf8c0f79303f546e9597
+=======
+>>>>>>> e33d78c483d09e3dfe0e37ff329f6fb9e75f8bb2
 
       </Container>
     </>
