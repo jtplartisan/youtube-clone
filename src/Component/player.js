@@ -1,7 +1,7 @@
 import React from "react";
-import { Row, Col, Container } from "react-bootstrap";
-import { BsHandThumbsDown, BsHandThumbsUp } from "react-icons/bs";
-import { FaRegShareSquare } from "react-icons/fa";
+import { Row,Col,Container } from "react-bootstrap";
+import {BsHandThumbsDown,BsHandThumbsUp} from "react-icons/bs";
+import {FaRegShareSquare} from "react-icons/fa";
 import { useSelector } from "react-redux";
 import { getSelectedVideo } from "../reducer/reducer";
 
@@ -22,8 +22,8 @@ const Player = () => {
           </Col>
         </Row>
 
-      </Container>
-    </>
-  )
+</Container>
+</>
+    )
 }
 export default Player;
