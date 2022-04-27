@@ -8,6 +8,7 @@ const CardP =(props) =>{
   const dispatch = useDispatch();
 
     return(
+<>
 
         <Card style={{ width: '18rem', padding:'1rem' }} className="justify-centent-center">
   <Card.Img variant="top" src={props.img} style={{ width: '16rem' , height: '13rem'}} />
@@ -19,6 +20,7 @@ const CardP =(props) =>{
   </ListGroup>
   
 </Card>
+</>
     )
 }
 
