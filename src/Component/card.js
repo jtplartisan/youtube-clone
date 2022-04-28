@@ -52,30 +52,26 @@ const CardP = (props) => {
        console.log(err)
      })
    }
-<<<<<<< HEAD
    function view(id,view){
-     if(view){
-       var addview=view+1;
-     }
-     else{
-       var addview=1;
-     }
-     console.log(addview)
-     axios.patch(`http://localhost:5000/video/${id}`, {
-       view:addview
-     }).then((res) => {
-       props.setRefresh(oldKey => oldKey +1)
-       alert('Thank You for Viewing')
- 
-     }).catch((err) => {
-       console.log(err)
-     })
-     
-   }
-=======
+    if(view){
+      var addview=view+1;
+    }
+    else{
+      var addview=1;
+    }
+    console.log(addview)
+    axios.patch(`http://localhost:5000/video/${id}`, {
+      view:addview
+    }).then((res) => {
+      props.setRefresh(oldKey => oldKey +1)
+      alert('Thank You for Viewing')
 
+    }).catch((err) => {
+      console.log(err)
+    })
+    
+  }
 
->>>>>>> f7600cb6565db4fd3b451dc324f23720544aa0b3
   
   return (
     <>    <Card style={{ padding: '0.5rem' }} className="justify-centent-center">
@@ -84,11 +80,7 @@ const CardP = (props) => {
         <Row>
           <Col sm={6} className='py-2'>  <Card.Title className="">{props.title}</Card.Title></Col>
           <Col sm={6} className='d-flex justify-content-end play py-2'>
-<<<<<<< HEAD
-             <BsFillPlayCircleFill onClick={() =>{dispatch(play(url)); view(props.id,props.view);} } /></Col>
-=======
-             <BsFillPlayCircleFill onClick={() =>dispatch(play(url))   }/></Col>
->>>>>>> f7600cb6565db4fd3b451dc324f23720544aa0b3
+             <BsFillPlayCircleFill onClick={() =>{dispatch(play(url)) ; view(props.id,props.view)}  }/></Col>
         </Row>
         
         <Row className=" title px-2">
