@@ -7,7 +7,8 @@
       "imgurl": "https://gallery.123telugu.com/content/images/check-feat.jpg",
       "tags": "Thriller",
       "like": 6,
-      "unlike": 3
+      "unlike": 3,
+      "view": 3
     },
     {
       "id": 2,
@@ -15,8 +16,9 @@
       "title": "A.Aa",
       "imgurl": "https://www.moviepazes.com/images/gallery/A%20Aa%20Movie%20Posters/00%20(2).jpg",
       "tags": "Love",
-      "like": 0,
-      "unlike": 1
+      "like": 1,
+      "unlike": 3,
+      "view": 1
     },
     {
       "id": 3,

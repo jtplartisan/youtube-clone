@@ -49,7 +49,7 @@ const Index = () => {
             {filter.map((item, index) => {
               return (
                 <Col sm={4}>
-                  <CardP img={item.imgurl} title={item.title} video={item.url} id={item.id} like={item.like} unlike={item.unlike} setRefresh={setRefreshKey} />
+                  <CardP img={item.imgurl} title={item.title} video={item.url} id={item.id} like={item.like} unlike={item.unlike} setRefresh={setRefreshKey} view={item.view} />
                 </Col>
               )
             })}
