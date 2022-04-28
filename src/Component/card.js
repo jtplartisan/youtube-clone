@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { Card, Button, ListGroup } from "react-bootstrap"
 import { useDispatch } from "react-redux";
 import { Container,Row,Col } from "react-bootstrap";
-import {BsHandThumbsDown,BsHandThumbsUp} from "react-icons/bs";
+import {BsHandThumbsDown,BsHandThumbsUp,BsFillPlayCircleFill} from "react-icons/bs";
 import {FaRegShareSquare} from "react-icons/fa";
 import axios from "axios";
 import { play } from "../reducer/reducer"
@@ -53,20 +53,18 @@ const CardP = (props) => {
 
   
   return (
-    <>    <Card style={{ width: '18rem', padding: '1rem' }} className="justify-centent-center">
-      <Card.Img variant="top" src={props.img} style={{ width: '16rem', height: '13rem' }} />
+    <>    <Card style={{ padding: '0.5rem' }} className="justify-centent-center">
+       <iframe height="230" src={props.video} title="YouTube video player" frameBorder="0"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
       <Card.Body>
-        <Card.Title className="text-center">{props.title}</Card.Title>
-      </Card.Body>
-      <ListGroup className="list-group-flush">
-        <Button onClick={() => dispatch(play(url))}>Play</Button>
-      </ListGroup>
+        <Row>
+          <Col sm={6} className='py-2'>  <Card.Title className="">{props.title}</Card.Title></Col>
+          <Col sm={6} className='d-flex justify-content-end play py-2'>
+             <BsFillPlayCircleFill onClick={() => dispatch(play(url))}/></Col>
+        </Row>
 
-    </Card>
-      <Container>
-        <Row className=" title px-3">
-          <Col sm={8}><h4>Title</h4></Col>
-          <Col sm={4} className='d-flex justify-content-center py-2 icons'>
+        <Row className=" title px-2">
+          <Col sm={6} className='py-2'><h6>Views</h6></Col>
+          <Col sm={6} className='d-flex justify-content-end py-2 icons'>
             <BsHandThumbsUp onClick={() => like(props.id,props.like)}/>
             <BsHandThumbsDown onClick={() => unlike(props.id,props.unlike)}/>
             <FaRegShareSquare />
@@ -74,8 +72,13 @@ const CardP = (props) => {
 
           </Col>
         </Row>
+      
+       
+      </Card.Body>
 
-      </Container>
+
+    </Card>
+    
     </>
 
   )
