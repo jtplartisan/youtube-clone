@@ -15,13 +15,15 @@ const Index = () => {
   const [refreshKey, setRefreshKey] = useState(0);
   useEffect(() => {
     var url = "http://localhost:5000/video";
-    function fetchemp(){  axios.get(url).then(res => {
-      const video = res.data;
-      setVideo(video);
-      setFilter(video);
-    })}
+    function fetchemp() {
+      axios.get(url).then(res => {
+        const video = res.data;
+        setVideo(video);
+        setFilter(video);
+      })
+    }
     fetchemp();
-    }, [refreshKey]); 
+  }, [refreshKey]);
 
   console.log(video)
   console.log(filter)
@@ -44,7 +46,7 @@ const Index = () => {
           </Row>
         </Container>
         <Container>
-          <Row className="pt-5">
+          <Row>
 
             {filter.map((item, index) => {
               return (

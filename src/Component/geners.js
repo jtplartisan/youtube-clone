@@ -8,12 +8,12 @@ const Geners = ({ video, setfilter }) => {
 
   // handleSearch use for search according to tags
   const handleSearch = (value) => {
-      const input = value.toLowerCase();
-      let res = [];
-      res = data.filter((d) => {
-          return d.tags.toLowerCase().search(input) !== -1;
-      })
-      setfilter(res);
+    const input = value.toLowerCase();
+    let res = [];
+    res = data.filter((d) => {
+      return d.tags.toLowerCase().search(input) !== -1;
+    })
+    setfilter(res);
 
   };
 

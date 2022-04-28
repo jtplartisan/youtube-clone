@@ -18,8 +18,11 @@ const CardP = (props) => {
 
 
   function like(id,like) {
-   const addlike = parseInt(like);
-   let add = addlike +1;
+   if(like){ 
+    var add = like +1;
+   }else{
+    var add = 1;
+   }
     console.log(add)
     axios.patch(`http://localhost:5000/video/${id}`, {
       like:add
@@ -33,11 +36,10 @@ const CardP = (props) => {
   }
 
   function unlike(id,unlike) {
-    if(unlike === ''){
-      var add = "1";
+    if(unlike){
+      var add = unlike +1;
     }else{
-      const addunlike = parseInt(unlike);
-    var add = addunlike +1;
+     var add = 1;
   }
      console.log(add)
      axios.patch(`http://localhost:5000/video/${id}`, {
@@ -50,6 +52,7 @@ const CardP = (props) => {
        console.log(err)
      })
    }
+<<<<<<< HEAD
    function view(id,view){
      if(view){
        var addview=view+1;
@@ -69,6 +72,10 @@ const CardP = (props) => {
      })
      
    }
+=======
+
+
+>>>>>>> f7600cb6565db4fd3b451dc324f23720544aa0b3
   
   return (
     <>    <Card style={{ padding: '0.5rem' }} className="justify-centent-center">
@@ -77,7 +84,11 @@ const CardP = (props) => {
         <Row>
           <Col sm={6} className='py-2'>  <Card.Title className="">{props.title}</Card.Title></Col>
           <Col sm={6} className='d-flex justify-content-end play py-2'>
+<<<<<<< HEAD
              <BsFillPlayCircleFill onClick={() =>{dispatch(play(url)); view(props.id,props.view);} } /></Col>
+=======
+             <BsFillPlayCircleFill onClick={() =>dispatch(play(url))   }/></Col>
+>>>>>>> f7600cb6565db4fd3b451dc324f23720544aa0b3
         </Row>
         
         <Row className=" title px-2">
