@@ -6,6 +6,7 @@ import {BsHandThumbsDown,BsHandThumbsUp,BsFillPlayCircleFill} from "react-icons/
 import axios from "axios";
 import { play } from "../reducer/reducer"
 import Example from "./modal";
+import ReactTooltip from "react-tooltip";
 
 
 const CardP = (props) => {
@@ -90,8 +91,9 @@ const CardP = (props) => {
         <Row className=" title px-2">
           <Col sm={6} className='py-2'><h6>Views: {props.view}</h6></Col>
           <Col sm={6} className='d-flex justify-content-end py-2 icons'>
-            <BsHandThumbsUp onClick={() => like(props.id,props.like)}/>
-            <BsHandThumbsDown onClick={() => unlike(props.id,props.unlike)}/>
+            <BsHandThumbsUp data-tip="Like" onClick={() => like(props.id,props.like)}/>
+            <BsHandThumbsDown data-tip="Unlike" onClick={() => unlike(props.id,props.unlike)}/>
+            <ReactTooltip type="info"  place="top" effect="solid"/>
             <Example url={props.video}/>
       
 

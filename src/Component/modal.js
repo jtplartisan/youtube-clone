@@ -1,6 +1,7 @@
-import {   Button,Modal } from 'react-bootstrap';
+import {   Button,Modal, Row, Col } from 'react-bootstrap';
 import React, { useState } from 'react';
-import {FaRegShareSquare} from "react-icons/fa";
+import {FaRegShareSquare, FaCopy} from "react-icons/fa";
+import ReactTooltip from 'react-tooltip';
 import { SimpleShareButtons } from "react-simple-share";
 
 function Example(props) {
@@ -8,20 +9,21 @@ function Example(props) {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  const [copySuccess, setCopySuccess] = useState('');
-  function copy(e) {
-    props.url.current.select();
-    document.execCommand('copy');
-    // This is just personal preference.
-    // I prefer to not show the the whole text area selected.
-    e.target.focus();
-    setCopySuccess('Copied!');
-  };
+ 
+  function copyfun(url) {
+    const check = navigator.clipboard.writeText(url);
+    console.log(url);
+    if(check){
+        alert("Copied Url");
+    }else{
+        alert("Something Wen Wrong");
+    }
+  }
   
   return (
     <>
      
-      <FaRegShareSquare  onClick={handleShow} />
+      <FaRegShareSquare  onClick={handleShow} data-tip="Share" />
 
       <Modal show={show} onHide={handleClose} >
       <Modal.Header closeButton >
@@ -40,14 +42,20 @@ function Example(props) {
 
           </Modal.Body>
           <Modal.Body>
-              {props.url}
-              <Button onClick={copy}></Button>
+              <Row> 
+                  <Col> {props.url} </Col>
+                  <Col>
+                  <FaCopy data-tip="Copy to Clipboard"  onClick={() => copyfun(props.url)} />
+                  <ReactTooltip type="info" place="top" effect="float"/>
+                  </Col>
+              </Row>
+             
           </Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={handleClose}>
               Close
             </Button>
-            {copySuccess}
+
           </Modal.Footer>
       </Modal>
     </>
