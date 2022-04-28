@@ -1,6 +1,6 @@
-import {   Button,Modal } from 'react-bootstrap';
+import {   Button,Modal, Row, Col } from 'react-bootstrap';
 import React, { useState } from 'react';
-import {FaRegShareSquare} from "react-icons/fa";
+import {FaRegShareSquare, FaCopy} from "react-icons/fa";
 import { SimpleShareButtons } from "react-simple-share";
 
 function Example(props) {
@@ -9,7 +9,15 @@ function Example(props) {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
  
-  
+  function copyfun(url) {
+    const check = navigator.clipboard.writeText(url);
+    console.log(url);
+    if(check){
+        alert("Link Copy");
+    }else{
+        alert("Link Not  Copy");
+    }
+  }
   
   return (
     <>
@@ -33,7 +41,13 @@ function Example(props) {
 
           </Modal.Body>
           <Modal.Body>
-              {props.url}
+              <Row> 
+                  <Col> {props.url} </Col>
+                  <Col>
+                  <FaCopy  onClick={() => copyfun(props.url)} />
+                  </Col>
+              </Row>
+             
           </Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={handleClose}>
