@@ -12,14 +12,17 @@ const Index = () => {
 
   const [video, setVideo] = useState([])
   const [filter, setFilter] = useState(video);
+  const [refreshKey, setRefreshKey] = useState(0);
   useEffect(() => {
     var url = "http://localhost:5000/video";
-    axios.get(url).then(res => {
+    function fetchemp(){  axios.get(url).then(res => {
       const video = res.data;
       setVideo(video);
       setFilter(video);
-    })
-  }, []);
+    })}
+    fetchemp();
+    }, [refreshKey]); 
+
   console.log(video)
   console.log(filter)
 
@@ -46,7 +49,7 @@ const Index = () => {
             {filter.map((item, index) => {
               return (
                 <Col sm={3}>
-                  <CardP img={item.imgurl} title={item.title} video={item.url} id={item.id}/>
+                  <CardP img={item.imgurl} title={item.title} video={item.url} id={item.id} like={item.like} unlike={item.unlike} setRefresh={setRefreshKey} />
                 </Col>
               )
             })}

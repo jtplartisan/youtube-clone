@@ -1,13 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  links: ['https://www.youtube.com/embed/uVzT6D-yhZg'],
-  play: 'https://www.youtube.com/embed/uVzT6D-yhZg'
+  links: ['https://www.youtube.com/embed/NpJ6lnbgi_s'],
+  play: 'https://www.youtube.com/embed/NpJ6lnbgi_s'
 };
 export const playlistSlice = createSlice({
   name: 'playlist',
-  links: ['https://www.youtube.com/embed/uVzT6D-yhZg'],
-  play: 'https://www.youtube.com/embed/uVzT6D-yhZg',
+  links: 'playListReducer',
+  play: 'playListReducer',
   initialState,
   reducers: {
     play: (state, action) => {
