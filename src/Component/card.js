@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react"
 import { Card, Button, ListGroup } from "react-bootstrap"
 import { useDispatch } from "react-redux";
-import { Container, Row, Col } from "react-bootstrap";
-import { BsHandThumbsDown, BsHandThumbsUp } from "react-icons/bs";
-import { FaRegShareSquare } from "react-icons/fa";
+import { Container,Row,Col } from "react-bootstrap";
+import {BsHandThumbsDown,BsHandThumbsUp,BsFillPlayCircleFill} from "react-icons/bs";
+import {FaRegShareSquare} from "react-icons/fa";
 import axios from "axios";
 import { play } from "../reducer/reducer"
 const CardP = (props) => {
@@ -17,14 +17,14 @@ const CardP = (props) => {
 
 
 
-  function like(id, like) {
-    const addlike = parseInt(like);
-    let add = addlike + 1;
+  function like(id,like) {
+   const addlike = parseInt(like);
+   let add = addlike +1;
     console.log(add)
     axios.patch(`http://localhost:5000/video/${id}`, {
-      like: add
+      like:add
     }).then((res) => {
-      props.setRefresh(oldKey => oldKey + 1)
+      props.setRefresh(oldKey => oldKey +1)
       alert('Liked')
 
     }).catch((err) => {
@@ -32,50 +32,53 @@ const CardP = (props) => {
     })
   }
 
-  function unlike(id, unlike) {
-    if (unlike === '') {
+  function unlike(id,unlike) {
+    if(unlike === ''){
       var add = "1";
-    } else {
+    }else{
       const addunlike = parseInt(unlike);
-      var add = addunlike + 1;
-    }
-    console.log(add)
-    axios.patch(`http://localhost:5000/video/${id}`, {
-      unlike: add
-    }).then((res) => {
-      props.setRefresh(oldKey => oldKey + 1)
-      alert('Unliked')
-
-    }).catch((err) => {
-      console.log(err)
-    })
+    var add = addunlike +1;
   }
+     console.log(add)
+     axios.patch(`http://localhost:5000/video/${id}`, {
+       unlike:add
+     }).then((res) => {
+       props.setRefresh(oldKey => oldKey +1)
+       alert('Unliked')
+ 
+     }).catch((err) => {
+       console.log(err)
+     })
+   }
 
-
+  
   return (
-    <>    <Card style={{ width: '18rem', padding: '1rem' }} className="justify-centent-center">
-      <Card.Img variant="top" src={props.img} style={{ width: '16rem', height: '13rem' }} />
+    <>    <Card style={{ padding: '0.5rem' }} className="justify-centent-center">
+       <iframe height="230" src={props.video} title="YouTube video player" frameBorder="0" controls="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
       <Card.Body>
-        <Card.Title className="text-center">{props.title}</Card.Title>
-      </Card.Body>
-      <ListGroup className="list-group-flush">
-        <Button onClick={() => dispatch(play(url))}>Play</Button>
-      </ListGroup>
+        <Row>
+          <Col sm={6} className='py-2'>  <Card.Title className="">{props.title}</Card.Title></Col>
+          <Col sm={6} className='d-flex justify-content-end play py-2'>
+             <BsFillPlayCircleFill onClick={() => dispatch(play(url))}/></Col>
+        </Row>
 
-    </Card>
-      <Container>
-        <Row className=" title px-3">
-          <Col sm={8}><h4>Title</h4></Col>
-          <Col sm={4} className='d-flex justify-content-center py-2 icons'>
-            <BsHandThumbsUp onClick={() => like(props.id, props.like)} />
-            <BsHandThumbsDown onClick={() => unlike(props.id, props.unlike)} />
+        <Row className=" title px-2">
+          <Col sm={6} className='py-2'><h6>Views</h6></Col>
+          <Col sm={6} className='d-flex justify-content-end py-2 icons'>
+            <BsHandThumbsUp onClick={() => like(props.id,props.like)}/>
+            <BsHandThumbsDown onClick={() => unlike(props.id,props.unlike)}/>
             <FaRegShareSquare />
 
 
           </Col>
         </Row>
+      
+       
+      </Card.Body>
 
-      </Container>
+
+    </Card>
+    
     </>
 
   )
