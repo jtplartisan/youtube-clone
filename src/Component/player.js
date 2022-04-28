@@ -1,15 +1,16 @@
 import React from "react";
-import { Row,Col,Container } from "react-bootstrap";
-import {BsHandThumbsDown,BsHandThumbsUp} from "react-icons/bs";
-import {FaRegShareSquare} from "react-icons/fa";
+import { Row, Col, Container } from "react-bootstrap";
+import { BsHandThumbsDown, BsHandThumbsUp } from "react-icons/bs";
+import { FaRegShareSquare } from "react-icons/fa";
 import { useSelector } from "react-redux";
 import { getSelectedVideo } from "../reducer/reducer";
+
 
 const Player = () => {
   const play = useSelector(getSelectedVideo); // from reducer
   return (
     <>
-      <iframe width="560" height="315" src={play} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+      <iframe width="560" height="315" src={play} title="YouTube video player" aria-controls="" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
       <Container>
         <Row className=" title px-3">
           <Col sm={8}><h4>Title</h4></Col>
@@ -17,13 +18,13 @@ const Player = () => {
             <BsHandThumbsUp />
             <BsHandThumbsDown />
             <FaRegShareSquare />
-
-
+            <TwitterIcon size={32} round={true} iconFillColor='black' />
+     
           </Col>
         </Row>
 
-</Container>
-</>
-    )
+      </Container>
+    </>
+  )
 }
 export default Player;
