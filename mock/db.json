@@ -8,7 +8,7 @@
       "tags": "Thriller",
       "like": 6,
       "unlike": 3,
-      "view": 2
+      "view": 1
     },
     {
       "id": 2,
@@ -18,7 +18,7 @@
       "tags": "Love",
       "like": 2,
       "unlike": 2,
-      "view": 1
+      "view": 2
     },
     {
       "id": 3,
@@ -32,7 +32,8 @@
       "url": "https://www.youtube.com/embed/gKizDojsdvs",
       "title": "KGF",
       "imgurl": "https://www.filmibeat.com/img/2017/08/kgf1-29-1503989563.jpg",
-      "tags": "Thriller"
+      "tags": "Thriller",
+      "view": 1
     },
     {
       "id": 5,
@@ -67,7 +68,8 @@
       "url": "https://www.youtube.com/embed/js4HJnv4Zu4",
       "title": "Magadheera ",
       "imgurl": "https://i.pinimg.com/736x/df/05/00/df050006f90de10798511ba31fb0b077.jpg",
-      "tags": "Action"
+      "tags": "Action",
+      "view": 1
     }
   ]
 }
