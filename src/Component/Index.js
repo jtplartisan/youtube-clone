@@ -44,11 +44,11 @@ const Index = () => {
           </Row>
         </Container>
         <Container>
-          <Row>
+          <Row className="pt-5">
 
             {filter.map((item, index) => {
               return (
-                <Col sm={3}>
+                <Col sm={4}>
                   <CardP img={item.imgurl} title={item.title} video={item.url} id={item.id} like={item.like} unlike={item.unlike} setRefresh={setRefreshKey} />
                 </Col>
               )

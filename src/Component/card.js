@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react"
 import { Card, Button, ListGroup } from "react-bootstrap"
 import { useDispatch } from "react-redux";
-import { Container,Row,Col } from "react-bootstrap";
-import {BsHandThumbsDown,BsHandThumbsUp} from "react-icons/bs";
-import {FaRegShareSquare} from "react-icons/fa";
+import { Container, Row, Col } from "react-bootstrap";
+import { BsHandThumbsDown, BsHandThumbsUp } from "react-icons/bs";
+import { FaRegShareSquare } from "react-icons/fa";
 import axios from "axios";
 import { play } from "../reducer/reducer"
 const CardP = (props) => {
@@ -17,14 +17,14 @@ const CardP = (props) => {
 
 
 
-  function like(id,like) {
-   const addlike = parseInt(like);
-   let add = addlike +1;
+  function like(id, like) {
+    const addlike = parseInt(like);
+    let add = addlike + 1;
     console.log(add)
     axios.patch(`http://localhost:5000/video/${id}`, {
-      like:add
+      like: add
     }).then((res) => {
-      props.setRefresh(oldKey => oldKey +1)
+      props.setRefresh(oldKey => oldKey + 1)
       alert('Liked')
 
     }).catch((err) => {
@@ -32,26 +32,26 @@ const CardP = (props) => {
     })
   }
 
-  function unlike(id,unlike) {
-    if(unlike === ''){
+  function unlike(id, unlike) {
+    if (unlike === '') {
       var add = "1";
-    }else{
+    } else {
       const addunlike = parseInt(unlike);
-    var add = addunlike +1;
-  }
-     console.log(add)
-     axios.patch(`http://localhost:5000/video/${id}`, {
-       unlike:add
-     }).then((res) => {
-       props.setRefresh(oldKey => oldKey +1)
-       alert('Unliked')
- 
-     }).catch((err) => {
-       console.log(err)
-     })
-   }
+      var add = addunlike + 1;
+    }
+    console.log(add)
+    axios.patch(`http://localhost:5000/video/${id}`, {
+      unlike: add
+    }).then((res) => {
+      props.setRefresh(oldKey => oldKey + 1)
+      alert('Unliked')
 
-  
+    }).catch((err) => {
+      console.log(err)
+    })
+  }
+
+
   return (
     <>    <Card style={{ width: '18rem', padding: '1rem' }} className="justify-centent-center">
       <Card.Img variant="top" src={props.img} style={{ width: '16rem', height: '13rem' }} />
@@ -67,8 +67,8 @@ const CardP = (props) => {
         <Row className=" title px-3">
           <Col sm={8}><h4>Title</h4></Col>
           <Col sm={4} className='d-flex justify-content-center py-2 icons'>
-            <BsHandThumbsUp onClick={() => like(props.id,props.like)}/>
-            <BsHandThumbsDown onClick={() => unlike(props.id,props.unlike)}/>
+            <BsHandThumbsUp onClick={() => like(props.id, props.like)} />
+            <BsHandThumbsDown onClick={() => unlike(props.id, props.unlike)} />
             <FaRegShareSquare />
 
 
