@@ -5,7 +5,6 @@ import Index from './Component/Index';
 function App() {
   return (
     <div className="App">
-
       <Index />
     </div>
   );
