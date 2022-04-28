@@ -3,9 +3,11 @@ import { Card, Button, ListGroup } from "react-bootstrap"
 import { useDispatch } from "react-redux";
 import { Container,Row,Col } from "react-bootstrap";
 import {BsHandThumbsDown,BsHandThumbsUp,BsFillPlayCircleFill} from "react-icons/bs";
-import {FaRegShareSquare} from "react-icons/fa";
 import axios from "axios";
 import { play } from "../reducer/reducer"
+import Example from "./modal";
+
+
 const CardP = (props) => {
   const url = props.video;
   const [urlplay, seturlplay] = useState("");
@@ -15,7 +17,7 @@ const CardP = (props) => {
     seturlplay(url);
   }, []);
 
-
+ 
 
   function like(id,like) {
    if(like){ 
@@ -72,8 +74,10 @@ const CardP = (props) => {
     
   }
 
+
   
   return (
+    
     <>    <Card style={{ padding: '0.5rem' }} className="justify-centent-center">
        <iframe height="230" src={props.video} title="YouTube video player" frameBorder="0" controls="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
       <Card.Body>
@@ -88,12 +92,12 @@ const CardP = (props) => {
           <Col sm={6} className='d-flex justify-content-end py-2 icons'>
             <BsHandThumbsUp onClick={() => like(props.id,props.like)}/>
             <BsHandThumbsDown onClick={() => unlike(props.id,props.unlike)}/>
-            <FaRegShareSquare   />
-
+            <Example url={props.video}/>
+      
 
           </Col>
         </Row>
-      
+         
        
       </Card.Body>
 

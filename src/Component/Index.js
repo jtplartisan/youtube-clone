@@ -7,6 +7,7 @@ import Player from "./player";
 import CardP from "./card";
 import { useEffect, useState } from "react";
 import axios from "axios";
+
 const Index = () => {
 
 
@@ -33,6 +34,7 @@ const Index = () => {
   return (
     <>
       <Container fluid>
+       
         <Row className="header">
           <Col sm={2} className=''><img src={youtube} className='logo' /></Col>
           <Col sm={10} className='py-3'>    <Search video={video} setfilter={setFilter} /> </Col>
@@ -57,6 +59,7 @@ const Index = () => {
             })}
 
           </Row>
+       
         </Container>
       </Container>
 
